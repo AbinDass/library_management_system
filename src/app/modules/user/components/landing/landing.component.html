@@ -1,0 +1,39 @@
+<div class="bg-black/80 min-h-screen">
+    <div class="container mx-auto p-8 text-white">
+      <header class="text-center mb-8">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-indigo-500 leading-tight mb-4">
+          Welcome to PHEONIX
+        </h1>
+        <p class="text-gray-300 text-lg md:text-xl lg:text-2xl">
+          Explore a world of knowledge and imagination.
+        </p>
+      </header>
+  
+      <div class="flex flex-col md:flex-row justify-center items-center gap-10 my-10">
+        
+        <div class="w-full md:w-1/2 flex justify-center items-center">
+          <div class="flex space-x-4">
+            <a
+              routerLink="/login"
+              class="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition duration-300"
+            >
+              Sign In
+            </a>
+            <a
+              routerLink="/register"
+              class="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition duration-300"
+            >
+              Sign Up
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- <section class="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> -->
+        <!-- Repeat app-book-card for each book or dynamically render them -->
+        <app-book-card></app-book-card>
+      <!-- </section> -->
+    </div>
+  </div>
+  
+  

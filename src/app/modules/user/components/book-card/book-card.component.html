@@ -1,0 +1,56 @@
+<!-- Responsive Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-10">
+    <!-- Replace this with dynamic data from your Angular component -->
+    <div *ngFor="let book of books" class="bg-white p-4 rounded-lg shadow-md">
+      <h2 class="text-lg font-semibold mb-2">{{book?.name}}</h2>
+      <p class="text-gray-600">{{book?.author}}</p>
+      <p class="text-gray-600">{{book?.price}}</p>
+      <p class="text-gray-600">{{book?.available}}</p>
+      <div *ngIf="!borrow">
+        <button class="bg-yellow-500 h-8 w-24 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded-full transition duration-300">
+          Borrow
+        </button>
+      </div>
+      <div *ngIf="borrow">
+        <button class="bg-yellow-500 h-8 w-24 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded-full transition duration-300">
+          Return
+        </button>
+      </div>
+    </div>
+  </div>
+  
+
+<div *ngIf="!books.length" class="p-10 h-[350px] gap-10 flex w-full">
+    <div class="max-w-md w-full bg-yellow-100 border-l-4 border-yellow-500 p-16 rounded-md shadow-md text-center">
+        <div class="flex items-center justify-center">
+          <!-- Warning Icon -->
+          <div class="bg-yellow-500 text-white rounded-full p-3">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h0M12 17h0M2 12s5.333-8 10-8 10 8 10 8-5.333 8-10 8-10-8-10-8z"></path>
+            </svg>
+          </div>
+    
+          <!-- Warning Title -->
+          <div class="ml-4">
+            <h2 class="text-lg font-semibold text-gray-800">No Books Available</h2>
+          </div>
+        </div>
+    
+        <!-- Warning Description -->
+        <p class="text-gray-600 mt-2">Currently, there are no books available.</p>
+      </div>
+      <div class="w-full ">
+        <div class="bg-cover h-[250px] bg-center  flex items-center" style="background-image: url('https://media.istockphoto.com/id/949118068/photo/books.jpg?s=612x612&w=0&k=20&c=1vbRHaA_aOl9tLIy6P2UANqQ27KQ_gSF-BH0sUjQ730=')">
+            <div class="text-white text-center mx-auto">
+              <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Explore the Book Library</h1>
+              <p class="text-lg md:text-xl lg:text-2xl mb-6">Embark on a journey through a world of captivating stories.</p>
+              <div class="flex flex-col md:flex-row items-center justify-center">
+                <a href="#" class="bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600 mb-2 md:mb-0 md:mr-4">Discover New Books</a>
+                <a href="#" class="bg-purple-500 text-white py-2 px-4 rounded-md hover:bg-purple-600">Browse Genres</a>
+              </div>
+            </div>
+          </div>
+          
+          
+      </div>
+</div>

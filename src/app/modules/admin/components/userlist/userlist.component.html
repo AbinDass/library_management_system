@@ -1,0 +1,48 @@
+<div *ngFor="let user of user">
+<table class="w-full bg-white border border-gray-300">
+    <thead>
+      <tr>
+          <th class="border-b px-4 py-2">Name</th>
+          <th class="border-b px-4 py-2">Email</th>
+          <th class="border-b px-4 py-2">phone</th>
+          <th class="border-b px-4 py-2">status</th>
+          <th class="border-b px-4 py-2">action</th>
+      </tr>
+
+    </thead>
+    <tbody>
+      <!-- Replace this with dynamic data from your Angular component -->
+      <tr>
+        <td class="border-b px-4 py-2">{{user?.fullname}}</td>
+        <td class="border-b px-4 py-2">{{user?.emailid}}</td>
+        <td class="border-b px-4 py-2">{{user?.phone}}</td>
+        <td class="border-b px-4 py-2">{{user?.isLogin}}</td>
+        <td class="border-b px-4 py-2"><button [routerLink]="'/adminhome/updateuser/'+user.emailid" class="w-24 rounded bg-green-200 text-white h-8">edit</button></td>
+        <!-- Add more rows with user data as needed -->
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+    <!-- No User Found Alert Card -->
+<div *ngIf="!user?.length" class="flex justify-center items-center h-screen">
+    <div class="bg-yellow-100 border-l-4 border-yellow-500 p-6 rounded-md shadow-md max-w-md">
+      <div class="flex items-center">
+        <!-- Warning Icon -->
+        <div class="bg-yellow-500 text-white rounded-full p-3">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h0M12 17h0M2 12s5.333-8 10-8 10 8 10 8-5.333 8-10 8-10-8-10-8z"></path>
+          </svg>
+        </div>
+  
+        <!-- Warning Title -->
+        <div class="ml-4">
+          <h2 class="text-lg font-semibold text-gray-800">No Users Found</h2>
+        </div>
+      </div>
+  
+      <!-- Warning Description -->
+      <p class="text-gray-600 mt-2">Sorry, no users were found in the system.</p>
+    </div>
+  </div>
+  

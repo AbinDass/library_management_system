@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+<div class="bg-gray-100 font-sans">
+
+    <div class="min-h-screen flex items-center justify-center">
+
+        <div class="bg-white p-8 rounded-md shadow-md w-96">
+
+            <!-- User Avatar -->
+            <div class="flex items-center justify-center mb-4">
+                <img src="https://cdn-icons-png.flaticon.com/512/6596/6596121.png" alt="User Avatar" class="w-20 h-20 rounded-full">
+            </div>
+
+            <!-- User Information -->
+            <div class="mb-4">
+                <h2 class="text-xl font-semibold text-gray-800">{{user.user?.fullname}}</h2>
+                <p class="text-sm text-gray-600">{{user.user?.emailid}}</p>
+            </div>
+
+            <!-- Edit Profile Button -->
+            <!-- <button class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Edit Profile</button> -->
+
+            <!-- User Details -->
+            <div class="mt-6">
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">User Details</h3>
+                <ul class="list-disc list-inside text-gray-600">
+                    <li>{{user.user?.role}}</li>
+                    <li>{{user.user?.phone}}</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Logout Button -->
+            <button class="mt-6 bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600">Logout</button>
+
+        </div>
+
+    </div>
+
+</div>

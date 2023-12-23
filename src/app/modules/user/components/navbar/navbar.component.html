@@ -1,0 +1,24 @@
+
+<nav class="bg-blue-500 p-4">
+  <div class="container mx-auto flex justify-between items-center">
+    <!-- Logo -->
+    <div class="text-white text-2xl font-semibold">Phoenix Library</div>
+
+    <!-- Navigation Links -->
+    <ul class="flex space-x-4">
+      <li><a href="#" class="text-white">Home</a></li>
+      <li><a href="#" class="text-white">Books</a></li>
+      <li><a routerLink="/borrowed" class="text-white">borrowed </a></li>
+      <li><a href="#" class="text-white" routerLink="/profile">profile</a></li>
+      <li>
+        <button
+          (click)="logOut()"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-full transition duration-300"
+        >
+          Logout
+        </button>
+      </li>
+      <!-- Add more links as needed -->
+    </ul>
+  </div>
+</nav>
