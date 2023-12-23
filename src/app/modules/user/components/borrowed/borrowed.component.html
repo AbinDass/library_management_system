@@ -1,2 +1,50 @@
 <app-navbar></app-navbar>
-<app-book-card [borrow]="borrow"></app-book-card>
+<div class="text-2xl">
+  <h1 class="text-center">borrowed books</h1>
+</div>
+<div
+  class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-10"
+>
+  <!-- Replace this with dynamic data from your Angular component -->
+  <div
+    *ngFor="let book of borrowedbooks"
+    class="bg-white p-4 rounded-lg shadow-md"
+  >
+    <h2 class="text-lg font-semibold mb-2">{{ book?.name }}</h2>
+    <p class="text-gray-600">{{ book?.author }}</p>
+    <p class="text-gray-600">{{ book?.price }}</p>
+    <p class="text-gray-600">{{ book?.available }}</p>
+    <div>
+      <button
+        (click)="returnBook(book._id)"
+        class="bg-yellow-500 h-8 w-24 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded-full transition duration-300"
+      >
+        Return
+      </button>
+    </div>
+
+    
+</div>
+
+<div
+      *ngIf="!borrowedbooks.length"
+      class="flex justify-center items-center"
+    >
+      <div
+        class="max-w-md bg-yellow-100 border-l-4 border-yellow-500 p-6 rounded-md shadow-md"
+      >
+        <div class="flex flex-col items-center">
+          <div class="ml-4">
+            <h2 class="text-lg font-semibold text-red-700">
+              sorry currently there is no books here!
+            </h2>
+          </div>
+        </div>
+
+        <p class="text-gray-600 mt-2">add some books to the library</p>
+        <div class="flex caption-bottom gap-5">
+          <h3 routerLink="/home" class="cursor-pointer">back to home</h3>
+        </div>
+      </div>
+    </div>
+  </div>

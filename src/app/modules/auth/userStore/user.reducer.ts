@@ -1,6 +1,6 @@
 import { createReducer, on } from '@ngrx/store';
 import { userData } from '../model/userData';
-import { addUser, updateUser } from './user.action';
+import { addUser, borrowBook, updateUser } from './user.action';
 export const initialState: userData[] | [] = []
 export const userReducer = createReducer(
     initialState,
@@ -17,7 +17,10 @@ export const userReducer = createReducer(
           user.emailid === action.emailid ? { ...user, ...action.users } : user
         );
         return updatedState;
-      })    
+      }),  
+      
+      
 
-    
-)  
+    )
+
+

@@ -1,9 +1,8 @@
-import { Book, userAction } from "../models/bookState";
+import { Book } from "../models/bookState";
 import { userData } from "../modules/auth/model/userData";
 
 export interface bookStateInterface{
     bookManagement:Book[],
-    userActions:userAction
 }
 
 export interface userStateInterface{

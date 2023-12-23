@@ -5,11 +5,6 @@ export interface Book{
     price:number,
     available:number,
     year:Date,
+    borrowedUsers:Array<string>,
     _id:string
-}
-
-export interface userAction{
-    bookid:string,
-    userMail:string,
-    status:string,
 }
