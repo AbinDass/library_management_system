@@ -10,6 +10,8 @@ import { BookCardComponent } from './components/book-card/book-card.component';
 import { HomeComponent } from './components/home/home.component';
 import { BorrowedComponent } from './components/borrowed/borrowed.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { UpdateprofileComponent } from './components/updateprofile/updateprofile.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,11 +23,14 @@ import { ProfileComponent } from './components/profile/profile.component';
     BookCardComponent,
     HomeComponent,
     BorrowedComponent,
-    ProfileComponent
+    ProfileComponent,
+    UpdateprofileComponent
   ],
   imports: [
     CommonModule,
-    UserRoutingModule
+    UserRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class UserModule { }
